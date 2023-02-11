@@ -25,9 +25,9 @@ source /etc/os-release
 ver=$VERSION_ID
 
 #detail nama perusahaan
-country=ID
-state=Indonesia
-locality=Indonesia
+country=PK
+state=Pakistan
+locality=Pakistan
 organization=infinity
 organizationalunit=infinity
 commonname=localhost
