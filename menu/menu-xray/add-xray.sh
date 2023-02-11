@@ -156,7 +156,8 @@ rm -rf /etc/xray/vmess-$user-tls.json
 rm -rf /etc/xray/vmess-$user-nontls.json
 #GRPC
 ###
-systemctl restart xray
+sy
+
 #buatvless WEBSOCKET
 vlesslinkws="vless://${uuid}@${domain}:443?path=/xrayws&security=tls&encryption=none&type=ws#${user}"
 vlesslinknon="vless://${uuid}@${domain}:80?path=/xrayws&security=none&encryption=none&type=ws#${user}"
@@ -414,8 +415,8 @@ END
 clear
 echo -e "
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}" | tee -a /etc/log-create-user.log
-echo -e "\E[44;1;39m            ⇱ BUAT SEMUA AKUN XRAY ⇲             \E[0m" | tee -a /etc/log-create-user.log
-echo -e "\E[44;1;39m            ⇱ XRAY MANTAPV3 Multi All Port ⇲             \E[0m" | tee -a /etc/log-create-user.log
+echo -e "\E[44;1;39m            ⇱ CREATE ALL XRAY ACCOUNTS ⇲             \E[0m" | tee -a /etc/log-create-user.log
+echo -e "\E[44;1;39m            ⇱ XRAY Ibrahim Multi All Port ⇲             \E[0m" | tee -a /etc/log-create-user.log
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}" | tee -a /etc/log-create-user.log
 echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a /etc/log-create-user.log
 echo -e "=========INFORMASI AKUN VPN XRAY=========" | tee -a /etc/log-create-user.log
@@ -430,7 +431,7 @@ echo -e "GRPC SSL/TLS: 443" | tee -a /etc/log-create-user.log
 echo -e "GRPC HTTP/NONE TLS: 80" | tee -a /etc/log-create-user.log
 echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a /etc/log-create-user.log
 
-echo -e "Protokol VPN: TROJAN" | tee -a /etc/log-create-user.log
+echo -e "Protocol VPN: TROJAN" | tee -a /etc/log-create-user.log
 echo -e "Network: WS/GRPC" | tee -a /etc/log-create-user.log
 echo -e "====== Path/ServiceName =======" | tee -a /etc/log-create-user.log
 echo -e "=> WS TLS : /xraytrojanws" | tee -a /etc/log-create-user.log
@@ -443,7 +444,7 @@ echo -e "Link Config WS HTTP/NONE TLS   : $nontrojanlinkws" | tee -a /etc/log-cr
 echo -e "Link Config GRPC HTTP/NONE TLS : $nontrojanlinkgrpc" | tee -a /etc/log-create-user.log
 echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a /etc/log-create-user.log
 
-echo -e "Protokol VPN: SHADOWSOCKS" | tee -a /etc/log-create-user.log
+echo -e "Protocol VPN: SHADOWSOCKS" | tee -a /etc/log-create-user.log
 echo -e "Network: WS/GRPC" | tee -a /etc/log-create-user.log
 echo -e "Method Cipers : aes-128-gcm" | tee -a /etc/log-create-user.log
 echo -e "====== Path/ServiceName =======" | tee -a /etc/log-create-user.log
@@ -457,7 +458,7 @@ echo -e "Link Config WS HTTP/NONE TLS   : $nonsslinkws" | tee -a /etc/log-create
 echo -e "Link Config GRPC HTTP/NONE TLS : $nonsslinkgrpc" | tee -a /etc/log-create-user.log
 echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a /etc/log-create-user.log
 
-echo -e "Protokol VPN: VLESS" | tee -a /etc/log-create-user.log
+echo -e "Protocol VPN: VLESS" | tee -a /etc/log-create-user.log
 echo -e "Network: WS/GRPC" | tee -a /etc/log-create-user.log
 echo -e "====== Path/ServiceName =======" | tee -a /etc/log-create-user.log
 echo -e "=> WS TLS : /xrayws" | tee -a /etc/log-create-user.log
@@ -469,7 +470,7 @@ echo -e "Link Config GRPC TLS  : $vlesslinkgrpc" | tee -a /etc/log-create-user.l
 echo -e "Link Config WS HTTP/NONE TLS   : $nonvlesslinkws" | tee -a /etc/log-create-user.log
 echo -e "Link Config GRPC HTTP/NONE TLS : $nonvlesslinkgrpc" | tee -a /etc/log-create-user.log
 echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a /etc/log-create-user.log
-echo -e "Protokol VPN: VMESS" | tee -a /etc/log-create-user.log
+echo -e "Protocol VPN: VMESS" | tee -a /etc/log-create-user.log
 echo -e "Alter ID: 0" | tee -a /etc/log-create-user.log
 echo -e "Network: WS/GRPC" | tee -a /etc/log-create-user.log
 echo -e "====== Path/ServiceName =======" | tee -a /etc/log-create-user.log
@@ -482,6 +483,6 @@ echo -e "Link Config GRPC TLS  : $vmesslinkgrpc" | tee -a /etc/log-create-user.l
 echo -e "Link Config WS HTTP/NONE TLS   : $nonvmesslinkws" | tee -a /etc/log-create-user.log
 echo -e "Link Config GRPC HTTP/NONE TLS : $nonvmesslinkgrpc" | tee -a /etc/log-create-user.log
 echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a /etc/log-create-user.log
-echo -e "SCRIPT MANTAPV3 by SL" | tee -a /etc/log-create-user.log
+echo -e "SCRIPT edited by ibrahim" | tee -a /etc/log-create-user.log
 echo "" | tee -a /etc/log-create-user.log
 cd
